@@ -50,11 +50,11 @@ Spring Boot 2.6.2 <br>
 
 To get the VehicleGarageApplication app running locally, follow these steps:
 
-1. Unzip the `VehicleGarage` folder.
-2. Open the `VehicleGarage` project on your favorite IDE.
+1. Clone the [VehicleGarage](https://github.com/aviranGoel/VehicleGarage) repository.
+2. Open the `VehicleGarage` folder on your favorite IDE.
 3. Run the `main` function of `VehicleGarageApplication` class. 
 4. Access the paths mentioned above by using `Postman`.
 
 Note: <br>
-A file called `VehicleGarage.postman_collection.json` attached in the folder. <br>
+A file called `VehicleGarage.postman_collection.json` attached in the repository. <br>
 You can import it to your `Postman` and run the HTTP requests, or use them as an example to write your own HTTP requests.
