@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "7bd92470-7cd6-4571-bf5d-d7abbb14ecba",
+		"name": "VehicleGarage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find Vehicle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Vehicles and Sort by Properties ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        \"currentTirePressure\",\r\n        \"availableEnergyPercentage\",\r\n        \"licenseNumber\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inflate the Vehicle tires",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage/inflate_tire/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage",
+						"inflate_tire",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add energy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage/add_energy/1?energy=40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage",
+						"add_energy",
+						"1"
+					],
+					"query": [
+						{
+							"key": "energy",
+							"value": "40"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle - ElectricMotorcycle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Electric Motorcycle\",\r\n    \"licenseNumber\": \"5\",\r\n    \"availableEnergyPercentage\": \"90\",\r\n    \"maximumTirePressure\": \"30\",\r\n    \"currentTirePressure\": \"30\",\r\n    \"type\": \"electricMotorcycle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle - RegularMotorcycle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Regular Motorcycle\",\r\n    \"licenseNumber\": \"6\",\r\n    \"availableEnergyPercentage\": \"25\",\r\n    \"maximumTirePressure\": \"30\",\r\n    \"currentTirePressure\": \"30\",\r\n    \"type\": \"regularMotorcycle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle - Truck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Truck\",\r\n    \"licenseNumber\": \"7\",\r\n    \"availableEnergyPercentage\": \"100\",\r\n    \"maximumTirePressure\": \"40\",\r\n    \"currentTirePressure\": \"40\",\r\n    \"energySource\": \"BATTERY\",\r\n    \"type\": \"truck\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle - RegularCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Regular Car\",\r\n    \"licenseNumber\": \"8\",\r\n    \"availableEnergyPercentage\": \"100\",\r\n    \"maximumTirePressure\": \"36\",\r\n    \"currentTirePressure\": \"36\",\r\n    \"type\": \"regularCar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle - ElectricCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Electric Car\",\r\n    \"licenseNumber\": \"9\",\r\n    \"availableEnergyPercentage\": \"100\",\r\n    \"maximumTirePressure\": \"36\",\r\n    \"currentTirePressure\": \"36\",\r\n    \"type\": \"electricCar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle_garage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle_garage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
